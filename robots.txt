@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+
+Sitemap: https://digitalfreight.co.uk/sitemap-index.xml
