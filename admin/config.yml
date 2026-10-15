@@ -4,9 +4,9 @@
 
 backend:
   name: github
-  repo: simonclay/digital-freight-source # TODO: replace once the real repo exists
+  repo: simonclay/digital-freight-source
   branch: main
-  # base_url: https://YOUR-AUTHENTICATOR.workers.dev  # only needed for real (non-local) GitHub login
+  base_url: https://sveltia-cms-auth.cms-tools.workers.dev # GitHub login helper (Cloudflare Worker, shared by all sites)
 
 media_folder: public/assets/images/uploads
 public_folder: /assets/images/uploads
