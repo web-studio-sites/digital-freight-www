@@ -199,7 +199,6 @@ collections:
           - { name: portalTitle, label: "Sidebar: portal card title", widget: string }
           - { name: portalBody, label: "Sidebar: portal card text", widget: string }
           - { name: portalLinkLabel, label: "Sidebar: portal card button text", widget: string }
-          - { name: portalHref, label: "Sidebar: portal card button link", widget: string }
           - { name: mapEmbedUrl, label: "Google Maps embed URL", widget: string }
           - { name: mapTitle, label: "Map iframe title (for accessibility)", widget: string }
 
@@ -370,6 +369,7 @@ collections:
         label: Site settings
         file: src/content/settings/site.json
         fields:
+          - { name: portalUrl, label: "Client portal link", widget: string, required: false, hint: "The customer portal login address. Used by every Client Portal and Log in button and link on the site (header, footer, homepage, contact page)." }
           - name: footerScripts
             label: "Footer scripts"
             label_singular: "script"
