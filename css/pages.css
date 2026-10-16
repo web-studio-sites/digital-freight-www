@@ -404,6 +404,11 @@
   color: var(--color-body);
 }
 
+.side-card__label {
+  display: block;
+  color: var(--color-ink);
+}
+
 .side-card__body:last-child {
   margin-bottom: 0;
 }
