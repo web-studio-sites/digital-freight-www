@@ -219,6 +219,18 @@
   }
 }
 
+/* Breadcrumbs run full width across the top of the hero, right-aligned on
+   desktop; on narrow screens they sit left above the eyebrow. */
+.page-hero__inner > .breadcrumbs {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 901px) {
+  .page-hero__inner > .breadcrumbs {
+    justify-content: flex-end;
+  }
+}
+
 .page-hero__title {
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem);
