@@ -219,15 +219,23 @@
   }
 }
 
-/* Breadcrumbs run full width across the top of the hero, right-aligned on
-   desktop; on narrow screens they sit left above the eyebrow. */
-.page-hero__inner > .breadcrumbs {
-  grid-column: 1 / -1;
+/* On desktop the breadcrumbs stay in their usual line above the eyebrow
+   (so nothing below moves) but align to the right edge of the hero. With a
+   motif, they stretch across it: motif width (19rem, 15rem under 1100px)
+   plus the grid gap. Mobile keeps them on the left. */
+@media (min-width: 901px) {
+  .page-hero .breadcrumbs {
+    justify-content: flex-end;
+  }
+
+  .page-hero__inner--with-visual .breadcrumbs {
+    margin-right: calc(-1 * (19rem + var(--space-14)));
+  }
 }
 
-@media (min-width: 901px) {
-  .page-hero__inner > .breadcrumbs {
-    justify-content: flex-end;
+@media (min-width: 901px) and (max-width: 1100px) {
+  .page-hero__inner--with-visual .breadcrumbs {
+    margin-right: calc(-1 * (15rem + var(--space-14)));
   }
 }
 
